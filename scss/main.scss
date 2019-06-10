@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300&display=swap'),
+        'animations.scss',
+        'components.scss',
+        'responsive.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    // background: linear-gradient(to left, rgb(47, 150, 163), #848492);
+    color: #fff;
+    overflow: hidden;
+    user-select: none;
+}
+
+.location,
+.temperature {
+    height: 30vh;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: -5%;
+
+    h1 {
+        font-size: xx-large;
+    }
+}
+
+.temperature {
+    flex-direction: column;
+}
+
+.degree-section {
+    display: flex;
+    align-items: center;  
+    cursor: pointer; 
+
+    span {
+       margin: 10px;
+       font-size: 40px; 
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+}
+
+.temperature-desctiption {
+    font-size: larger;
+}
+
+
+.footer {
+    width: 80%;
+    border-top-right-radius: 2em;
+    border-top-left-radius: 2em;
+    background: white;
+    z-index: 2;
+    position: absolute;
+    height: 10vh;
+    bottom: 0;
+    color: #000;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: #565353 0 0 20px 1px;
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            color: #848492;
+        }
+    }
+
+    .toggle {
+        position: fixed;
+        bottom: 1em;
+        right: 5%;
+        width: 40px;
+        height: 40px;
+        background: #384344;
+        border-radius: 50%;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: white;
+        transition: all .2s ease;
+
+        &:hover {
+            background: #384344b0;
+            box-shadow: 0 0 0 3px #384344;
+        }
+    }
+}
+

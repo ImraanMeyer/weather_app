@@ -1,0 +1,22 @@
+// Mobile View
+
+@media only screen 
+  and (min-width: 320px) 
+  and (max-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .location {
+        flex-direction: column;
+    }
+
+    .page {
+        overflow: hidden !important;
+        min-height: fit-content !important;
+    }
+
+    svg {
+        animation: none !important;
+        width: auto;
+        height: 60% !important;
+    }
+}

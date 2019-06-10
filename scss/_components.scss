@@ -1,0 +1,53 @@
+.svg {
+    position: absolute;
+    height: 100vh;
+    right: -100px;
+    bottom: -2px;
+    z-index: -99;
+    animation: pan 8s infinite;
+
+    #curve {
+        fill: #5a5a5a;
+    }
+}
+
+.svg_2 {
+    position: absolute;
+    height: 100vh;
+    right: -80px;
+    bottom: -2px;
+    z-index: -99;
+    animation: pan_2 8s infinite;
+    animation-delay: 1s 500ms;
+
+    #curve {
+        fill: #9b454586;
+    }
+}
+
+.svg_3 {
+    position: absolute;
+    height: 100vh;
+    transform: rotate(180deg);
+    left: -180px;
+    top: -200px;
+    animation: motion 5s  ease infinite;
+
+    #curve {
+        fill: #34343d;
+    }
+}
+
+.svg_4 {
+    position: absolute;
+    height: 100vh;
+    transform: rotate(180deg);
+    left: -190px;
+    top: -200px;
+    animation: motion_2 5s  ease infinite;
+    animation-delay: 1s;
+
+    #curve {
+        fill: #4b4b5794;
+    }
+}

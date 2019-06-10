@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body class="page">
+    <svg viewBox="0 0 1024 768" class="svg">
+        
+        <path id="curve" class="cloud"
+        d="M1028.182,92.286C979.483,68.43,876.038,26.499,747.662,42.935
+		C549.717,68.278,431.939,214.537,410,242.935c-124.503,161.162-50.716,265.297-185.714,389.61
+		C145.352,705.231,5.905,774.812,0.909,767.61c-0.251-0.363-0.139-0.887,0.011-1.299L1029.5,768
+		C1029.061,542.762,1028.621,317.524,1028.182,92.286z"/>
+    </svg>
+
+    <svg viewBox="0 0 1024 768" class="svg_2">
+        
+        <path id="curve" class="cloud_2"
+        d="M1028.182,92.286C979.483,68.43,876.038,26.499,747.662,42.935
+		C549.717,68.278,431.939,214.537,410,242.935c-124.503,161.162-50.716,265.297-185.714,389.61
+		C145.352,705.231,5.905,774.812,0.909,767.61c-0.251-0.363-0.139-0.887,0.011-1.299L1029.5,768
+		C1029.061,542.762,1028.621,317.524,1028.182,92.286z"/>
+    </svg>
+
+    <svg viewBox="0 0 1024 768" class="svg_3">
+        
+        <path id="curve" class="sun" 
+        d="M1028.182,92.286C979.483,68.43,876.038,26.499,747.662,42.935
+		C549.717,68.278,431.939,214.537,410,242.935c-124.503,161.162-50.716,265.297-185.714,389.61
+		C145.352,705.231,5.905,774.812,0.909,767.61c-0.251-0.363-0.139-0.887,0.011-1.299L1029.5,768
+		C1029.061,542.762,1028.621,317.524,1028.182,92.286z"/>
+    </svg>
+
+    <svg viewBox="0 0 1024 768" class="svg_4">
+        
+        <path id="curve" class="sun_2"
+        d="M1028.182,92.286C979.483,68.43,876.038,26.499,747.662,42.935
+		C549.717,68.278,431.939,214.537,410,242.935c-124.503,161.162-50.716,265.297-185.714,389.61
+		C145.352,705.231,5.905,774.812,0.909,767.61c-0.251-0.363-0.139-0.887,0.011-1.299L1029.5,768
+		C1029.061,542.762,1028.621,317.524,1028.182,92.286z"/>
+    </svg>
+
+    
+
+    <section class="location">
+        <h1 class="location-timezone"></h1>
+        <canvas class="icon" width="128" height="128"></canvas>
+    </section>
+    <section class="temperature">
+        <div class="degree-section">
+            <h2 class="temperature-degree"></h2>
+            <span class="unit"></span>
+
+        </div>
+        <div class="temperature-desctiption"></div>
+    </section>
+
+    <footer class="footer">
+        <h6>Created by <a href="https://imraanmeyer.github.io/online_cv/" target="blank">Imraan Meyer</a></h6>
+        <p>Powered by <a href="https://darksky.net" target="blank">Dark Sky API</a> </p>
+
+        <button class="toggle"></button>
+        
+    </footer>
+    
+    <script src="./js/skycons.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
