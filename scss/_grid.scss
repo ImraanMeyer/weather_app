@@ -1,0 +1,67 @@
+// Global Grids
+
+
+
+@media only screen 
+  and (min-width: 320px) 
+  and (max-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+    body {
+        display: grid !important;
+        grid-column: 1 !important;
+        grid-template-rows: 45% 45% 10% !important;
+        position: fixed !important;
+
+        grid-template-areas:
+            'location'
+            'temp'
+            'footer';
+
+        svg {
+            position: fixed !important;
+        }
+    
+        .location {
+            display: grid;
+            grid-area: location;
+            place-content: center;
+            grid-template-areas: 
+            'location' 
+            'icon';
+            width: auto;
+            height: 50%;
+            margin-top: auto;
+            
+            .location-timezone {
+                grid-area: location;
+            }
+
+            .icon {
+                grid-area: icon;
+                margin: 0 auto;
+                border-radius: 50%;
+            }
+        }   
+
+        .temperature  {
+            display: grid;
+            grid-area: temp;
+            place-content: center;
+            margin: 0 auto;
+            height: 50%;
+
+            .temperature-description {
+                display: grid;
+                place-content: center;
+            }
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+
+    }
+    
+
+  }

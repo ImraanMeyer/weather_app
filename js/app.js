@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
     let long;
     let lat;
-    let tempDescription = document.querySelector('.temperature-desctiption');
+    let tempDescription = document.querySelector('.temperature-description');
     let tempDegree = document.querySelector('.temperature-degree');
     let locaTime = document.querySelector('.location-timezone');
     let unit = document.querySelector('.unit');
@@ -10,7 +10,8 @@ window.addEventListener('load', () => {
     let sun_1  = document.querySelector('.sun');
     let sun_2  = document.querySelector('.sun_2');
     let cloud_1  = document.querySelector('.cloud');
-    let cloud_2  = document.querySelector('.cloud_2');
+    let cloud_2  = document.querySelector('.cloud_2'); 
+
 
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {

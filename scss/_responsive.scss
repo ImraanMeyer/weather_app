@@ -5,18 +5,71 @@
   and (max-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
-    .location {
-        flex-direction: column;
+    .page {
+        width: 100% !important;
     }
 
+    .location {
+        flex-direction: column;
+
+        & h1 {
+            font-size: larger !important;
+            margin-bottom: 60px;
+        }
+    }
     .page {
         overflow: hidden !important;
         min-height: fit-content !important;
+        position: relative !important;
+        justify-content: normal;
+    }
+
+
+    svg {
+        overflow: hidden;
+        width: auto;
+        height: 60% !important;
+        position: relative;
+    }
+
+    .svg {
+        animation: pan 10s infinite !important;
+    }
+    .svg_2 {
+        animation: pan_2 10s infinite !important;
+    }
+    .svg_3 {
+        animation: motion 10s infinite !important;
+    }
+
+    .svg_4 {
+        animation: motion_2 10s infinite !important;
     }
 
     svg {
-        animation: none !important;
-        width: auto;
         height: 60% !important;
+    }
+    
+
+    .svg,
+    .svg_2 {
+        right: -50% !important;
+        bottom: -70% !important;
+    }
+
+    .svg_3 {
+       left: -25%;
+    }
+
+    .svg_4 {
+        right: -15%;
+    }
+    
+    .toggle {
+        position: absolute !important;
+    }
+
+    .footer {
+        width: 100% !important;
     }
 }
