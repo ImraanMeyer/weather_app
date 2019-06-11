@@ -57,26 +57,25 @@ window.addEventListener('load', () => {
                         }
                     })
 
-                    if(icon == 'partly-cloudy-day' && 'clear-day') {
+                    if(icon == 'partly-cloudy-day' || 'clear-day' || 'cloudy') {
                         page.style.backgroundColor = '#AFDFF3';
                         sun_1.style.fill = '#FFCC33b0';
                         sun_2.style.fill = '#ffe484b0';
                         cloud_1.style.fill = '#F0F0F0b0';
                         cloud_2.style.fill = '#DAD9D7b0';
-                    } if(icon == 'partly-cloudy-night' && 'clear-night') {
+                    } else if (icon == 'partly-cloudy-night' || 'clear-night') {
                         page.style.backgroundColor = '#384344';
                         sun_1.style.fill = '#31302Eb0';
                         sun_2.style.fill = '#94908Db0';
                         cloud_1.style.fill = '#66828eb0';
                         cloud_2.style.fill = '#DAD9D7b0';
-
-                    } if (icon == 'rain' && 'wind' && 'sleet') {
+                    } else if (icon == 'rain' || 'wind') {
                         page.style.backgroundColor = '#83929F';
                         sun_1.style.fill = '#31302Eb0';
                         sun_2.style.fill = '#94908Db0';
                         cloud_1.style.fill = '#66828eb0';
                         cloud_2.style.fill = '#DAD9D7b0';
-                    } if (icon == 'snow' && 'fog') {
+                    } else if (icon == 'snow' || 'fog' || 'sleet') {
                         page.style.backgroundColor = '#F0F0F0';
                         sun_1.style.fill = '#31302Eb0';
                         sun_2.style.fill = '#C3C2BEb0';
@@ -84,9 +83,7 @@ window.addEventListener('load', () => {
                         cloud_2.style.fill = '#DAD4D7b0';
                         page.style.color = '#384344';
 
-                    } else {
-                        page.style.background = '518D6A';
-                    }
+                    } 
 
                     //set icons
                     setIcons(icon, document.querySelector('.icon'));
