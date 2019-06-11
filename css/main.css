@@ -155,8 +155,7 @@
         grid-area: location; }
       body .location .icon {
         grid-area: icon;
-        margin: 0 auto;
-        border-radius: 50%; }
+        margin: 0 auto; }
     body .temperature {
       display: grid;
       grid-area: temp;
