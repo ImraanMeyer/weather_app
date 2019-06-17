@@ -58,40 +58,13 @@ window.addEventListener('load', () => {
                         }
                     })
 
-                    if(icon == 'partly-cloudy-day' || 'clear-day' || 'cloudy') {
-                        page.style.backgroundColor = '#AFDFF3';
-                        sun_1.style.fill = '#FFCC33b0';
-                        sun_2.style.fill = '#ffe484b0';
-                        cloud_1.style.fill = '#F0F0F0b0';
-                        cloud_2.style.fill = '#DAD9D7b0';
-                    } else if (icon == 'partly-cloudy-night' || 'clear-night') {
-                        page.style.backgroundColor = '#384344';
-                        sun_1.style.fill = '#31302Eb0';
-                        sun_2.style.fill = '#94908Db0';
-                        cloud_1.style.fill = '#66828eb0';
-                        cloud_2.style.fill = '#DAD9D7b0';
-                    } else if (icon == 'rain' || 'wind') {
-                        page.style.backgroundColor = '#83929F';
-                        sun_1.style.fill = '#31302Eb0';
-                        sun_2.style.fill = '#94908Db0';
-                        cloud_1.style.fill = '#66828eb0';
-                        cloud_2.style.fill = '#DAD9D7b0';
-                    } else if (icon == 'snow' || 'fog' || 'sleet') {
-                        page.style.backgroundColor = '#F0F0F0';
-                        sun_1.style.fill = '#31302Eb0';
-                        sun_2.style.fill = '#C3C2BEb0';
-                        cloud_1.style.fill = '#66828eb0';
-                        cloud_2.style.fill = '#DAD4D7b0';
-                        page.style.color = '#384344';
-
-                    } 
-
-                    //set icons
+                    // Set Icons from API
                     setIcons(icon, document.querySelector('.icon'));
                 })
         }); 
     } 
 
+    // Replaces DARK SKY API icon syntax with skycons syntax
     setIcons = (icon , iconID) => {
         const skycons = new Skycons({color: 'white'});
         const currentIcon = icon.replace(/-/g, "_").toUpperCase();
@@ -99,4 +72,34 @@ window.addEventListener('load', () => {
         skycons.play();
         return skycons.set(iconID, Skycons[currentIcon]);
     }
+
+    // Set Background and Greeting
+    setBgGreet = () => {
+        let today = new Date(),
+            hour = today.getHours();
+    
+        if (hour < 12) {
+        // Moring
+        page.style.backgroundColor = '#83929F';
+        sun_1.style.fill = '#31302Eb0';
+        sun_2.style.fill = '#94908Db0';
+        cloud_1.style.fill = '#66828eb0';
+        cloud_2.style.fill = '#DAD9D7b0';
+        } else if (hour < 18) {
+        // Afternoon
+        page.style.backgroundColor = '#AFDFF3';
+        sun_1.style.fill = '#FFCC33b0';
+        sun_2.style.fill = '#ffe484b0';
+        cloud_1.style.fill = '#F0F0F0b0';
+        cloud_2.style.fill = '#DAD9D7b0';
+        } else {
+        // Evening
+        page.style.backgroundColor = '#384344';
+        sun_1.style.fill = '#31302Eb0';
+        sun_2.style.fill = '#94908Db0';
+        cloud_1.style.fill = '#66828eb0';
+        cloud_2.style.fill = '#DAD9D7b0';
+        }
+    }
+    setBgGreet();
 });

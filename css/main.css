@@ -58,7 +58,7 @@
   animation: pan_2 8s infinite;
   animation-delay: 1s 500ms; }
   .svg_2 #curve {
-    fill: #9b454586; }
+    fill: #4b4b5794; }
 
 .svg_3 {
   position: absolute;
@@ -181,6 +181,7 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background: #848492;
   color: #fff;
   overflow: hidden;
   user-select: none; }
